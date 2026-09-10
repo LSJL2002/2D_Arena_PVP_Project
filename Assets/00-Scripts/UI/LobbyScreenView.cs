@@ -6,6 +6,7 @@ public class LobbyScreenView : MonoBehaviour
     [SerializeField] private GameObject mainScreen;
     [SerializeField] private GameObject createRoomScreen;
     [SerializeField] private GameObject joinRoomScreen;
+    [SerializeField] private GameObject lobbyRoomScreen;
 
     private Dictionary<string, GameObject> screens = new();
 
@@ -14,6 +15,7 @@ public class LobbyScreenView : MonoBehaviour
         screens.Add("MainScreen", mainScreen);
         screens.Add("CreateRoomScreen", createRoomScreen);
         screens.Add("JoinRoomScreen", joinRoomScreen);
+        screens.Add("LobbyRoomScreen", lobbyRoomScreen);
         DeactivateAllScreens();
     }
 
