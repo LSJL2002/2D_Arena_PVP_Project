@@ -937,7 +937,7 @@ MonoBehaviour:
   mainScreen: {fileID: 1920809900}
   createRoomScreen: {fileID: 1177155688}
   joinRoomScreen: {fileID: 954091927}
-  lobbyRoomScreen: {fileID: 0}
+  lobbyRoomScreen: {fileID: 1920809900}
 --- !u!1 &514213083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,6 +2414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 954091928}
+  - component: {fileID: 954091929}
   m_Layer: 5
   m_Name: JoinRoomScreen
   m_TagString: Untagged
@@ -2442,6 +2443,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &954091929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954091927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e029917c8271049bffdd3147446c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JoinRoomScreen
+  presenter: {fileID: 16087217}
+  roomListContent: {fileID: 1964041438}
+  roomItemPrefab: {fileID: 3899109429526007915, guid: 1715d613012e0db408818c9336e48582, type: 3}
+  refreshButton: {fileID: 1182275706}
+  passwordInput: {fileID: 0}
+  statusText: {fileID: 0}
 --- !u!1 &1006565938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,13 +2796,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1177155689}
+  - component: {fileID: 1177155690}
   m_Layer: 5
   m_Name: CreateRoomScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1177155689
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2805,6 +2825,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1177155690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177155688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f94e9d7e64788458599b2e25f54a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreateRoomScreen
+  presenter: {fileID: 16087217}
+  roomNameInput: {fileID: 820886876}
+  passwordInput: {fileID: 33619508}
+  createButton: {fileID: 931340551}
+  statusText: {fileID: 0}
 --- !u!1 &1182275704
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,6 +3347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468914329}
+  - component: {fileID: 1468914330}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -3332,6 +3370,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468914330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468914327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7fb8a9bb232e648b80c735ccd5f3f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkManager
 --- !u!1 &1469018060
 GameObject:
   m_ObjectHideFlags: 0
