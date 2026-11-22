@@ -5,8 +5,9 @@ public enum LobbyScreenType
     MainScreen,
     CreateRoomScreen,
     JoinRoomScreen,
-
-    LobbyRoomScreen
+    SettingsScreen,
+    LobbyRoomScreen,
+    WaitingRoomScreen,
 }
 
 public class LobbyScreenPresenter : MonoBehaviour

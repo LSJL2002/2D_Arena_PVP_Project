@@ -38,7 +38,7 @@ public class CreateRoomScreen : MonoBehaviour
         if (ok)
         {
             SetStatus(string.Empty);
-            presenter.NavigateTo(LobbyScreenType.LobbyRoomScreen);
+            presenter.NavigateTo(LobbyScreenType.WaitingRoomScreen);
         }
         else
         {

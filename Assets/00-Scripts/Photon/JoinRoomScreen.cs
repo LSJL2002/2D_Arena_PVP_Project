@@ -33,6 +33,8 @@ public class JoinRoomScreen : MonoBehaviour
 
     private void OnEnable()
     {
+        if (NetworkManager.Instance == null) return;
+
         NetworkManager.Instance.SessionListUpdated += RenderRooms;
         Refresh();
     }
@@ -72,6 +74,8 @@ public class JoinRoomScreen : MonoBehaviour
             RoomListItem item = Instantiate(roomItemPrefab, roomListContent);
             item.Setup(session, OnJoinClicked);
             spawnedItems.Add(item);
+            Debug.Log($"Room row created: '{session.Name}' under '{roomListContent.name}' " +
+                      $"(active: {item.gameObject.activeInHierarchy}, size: {((RectTransform)item.transform).rect.size})");
         }
 
         SetStatus(sessions.Count == 0 ? "No rooms found." : string.Empty);
@@ -89,7 +93,7 @@ public class JoinRoomScreen : MonoBehaviour
         isJoining = false;
         if (ok)
         {
-            presenter.NavigateTo(LobbyScreenType.LobbyRoomScreen);
+            presenter.NavigateTo(LobbyScreenType.WaitingRoomScreen);
         }
         else
         {

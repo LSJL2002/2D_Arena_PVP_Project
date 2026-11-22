@@ -7,6 +7,8 @@ public class LobbyScreenView : MonoBehaviour
     [SerializeField] private GameObject createRoomScreen;
     [SerializeField] private GameObject joinRoomScreen;
     [SerializeField] private GameObject lobbyRoomScreen;
+    [SerializeField] private GameObject settingsRoomScreen;
+    [SerializeField] private GameObject waitingRoomScreen;
 
     private Dictionary<string, GameObject> screens = new();
 
@@ -16,6 +18,8 @@ public class LobbyScreenView : MonoBehaviour
         screens.Add("CreateRoomScreen", createRoomScreen);
         screens.Add("JoinRoomScreen", joinRoomScreen);
         screens.Add("LobbyRoomScreen", lobbyRoomScreen);
+        screens.Add("SettingsScreen", settingsRoomScreen);
+        screens.Add("WaitingRoomScreen", waitingRoomScreen);
         DeactivateAllScreens();
     }
 

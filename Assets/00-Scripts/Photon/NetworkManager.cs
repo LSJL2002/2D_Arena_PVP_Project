@@ -42,6 +42,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
 
     // Only used by the host, to check the password of joining players.
     private string hostPassword;
+    [SerializeField] private PlayerData playerDataPrefab;
 
     private void Awake()
     {
@@ -106,7 +107,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         if (result.Ok)
         {
             IsInLobby = true;
-            Debug.Log("Joined session lobby");
+            Debug.Log($"Joined session lobby (region: {Runner.LobbyInfo.Region})");
         }
         else
         {
@@ -149,7 +150,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         if (result.Ok)
         {
             IsInLobby = false; // the runner is now in a game, not the lobby
-            Debug.Log($"Room created: {roomName}");
+            Debug.Log($"Room created: {roomName} (region: {Runner.SessionInfo.Region})");
         }
         else
         {
@@ -173,7 +174,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         if (result.Ok)
         {
             IsInLobby = false;
-            Debug.Log($"Joined room: {roomName}");
+            Debug.Log($"Joined room: {roomName} (region: {Runner.SessionInfo.Region})");
         }
         else
         {
@@ -203,6 +204,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
                 sessions.Add(session);
             }
         }
+        Debug.Log($"Room list updated: {sessions.Count} room(s) visible");
         SessionListUpdated?.Invoke(sessions);
     }
 
@@ -235,7 +237,13 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         RunnerShutdown?.Invoke(shutdownReason);
     }
 
-    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
+    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) 
+    { 
+        if(!runner.IsServer) return; // Only the host should spawn player data
+
+        PlayerData data = runner.Spawn(playerDataPrefab, inputAuthority: player);
+        data.Slot = (player == runner.LocalPlayer) ? 1 : 2; // 1 is host and 2 is local player on the host
+    }
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
     public void OnInput(NetworkRunner runner, NetworkInput input) { }
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
