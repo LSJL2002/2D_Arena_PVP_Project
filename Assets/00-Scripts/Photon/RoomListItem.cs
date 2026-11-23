@@ -15,8 +15,7 @@ public class RoomListItem : MonoBehaviour
 
     public void Setup(SessionInfo session, Action<SessionInfo> onJoinClicked)
     {
-        bool hasPassword = session.Properties.TryGetValue(NetworkManager.HasPasswordKey, out SessionProperty prop)
-                           && (bool)prop;
+        bool hasPassword = NetworkManager.HasPassword(session);
 
         nameText.text = hasPassword ? $"{session.Name} (locked)" : session.Name;
         playerCountText.text = $"{session.PlayerCount}/{session.MaxPlayers}";

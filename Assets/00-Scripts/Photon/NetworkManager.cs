@@ -159,8 +159,12 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         return result.Ok;
     }
 
-    /// <summary>Joins an existing room by name (this player becomes a Client).</summary>
-    public async Task<bool> JoinRoom(string roomName, string password = "")
+    /// <summary>
+    /// Joins an existing room by name (this player becomes a Client).
+    /// Returns ShutdownReason.Ok on success, otherwise why it failed
+    /// (ConnectionRefused = wrong password, GameIsFull, GameNotFound/GameClosed = room gone).
+    /// </summary>
+    public async Task<ShutdownReason> JoinRoom(string roomName, string password = "")
     {
         StartGameResult result = await Runner.StartGame(new StartGameArgs
         {
@@ -180,7 +184,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         {
             Debug.LogError($"Failed to join room: {result.ShutdownReason} {result.ErrorMessage}");
         }
-        return result.Ok;
+        return result.Ok ? ShutdownReason.Ok : result.ShutdownReason;
     }
 
     /// <summary>Leaves the current room or lobby and gets a fresh runner ready.</summary>
@@ -244,7 +248,24 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         PlayerData data = runner.Spawn(playerDataPrefab, inputAuthority: player);
         data.Slot = (player == runner.LocalPlayer) ? 1 : 2; // 1 is host and 2 is local player on the host
     }
-    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
+
+    public static bool HasPassword(SessionInfo session)
+    {
+        return session.Properties.TryGetValue(HasPasswordKey, out SessionProperty prop) && (bool)prop;
+    }
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
+    {
+        if (!runner.IsServer) return;
+
+        for (int i = PlayerData.All.Count - 1; i >= 0; i--)
+        {
+            PlayerData data = PlayerData.All[i];
+            if (data.Object.InputAuthority == player)
+            {
+                runner.Despawn(data.Object);
+            }
+        }
+    }
     public void OnInput(NetworkRunner runner, NetworkInput input) { }
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
     public void OnConnectedToServer(NetworkRunner runner) { }

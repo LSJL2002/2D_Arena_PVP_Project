@@ -15,13 +15,22 @@ public class JoinRoomScreen : MonoBehaviour
     [SerializeField] private Transform roomListContent;   // ScrollView > Viewport > Content
     [SerializeField] private RoomListItem roomItemPrefab; // 02-Prefab/Room
     [SerializeField] private Button refreshButton;
-    [Tooltip("Optional: password used when joining a locked room.")]
-    [SerializeField] private TMP_InputField passwordInput;
     [Tooltip("Optional: shows 'Connecting...', 'No rooms found', errors.")]
     [SerializeField] private TMP_Text statusText;
+    [Header("Password Input")]
+    [SerializeField] private GameObject inputPasswordScreen;   // the popup panel
+    [SerializeField] private TMP_InputField inputPasswordField;
+    [SerializeField] private Button inputPasswordSubmitButton;
+    [Tooltip("Shows which room the password is for.")]
+    [SerializeField] private TMP_Text roomName;
+    [Tooltip("Optional: closes the popup without joining.")]
+    [SerializeField] private Button inputPasswordCancelButton;
+    [Tooltip("Optional: shows 'Wrong password.' inside the popup.")]
+    [SerializeField] private TMP_Text inputPasswordErrorText;
 
     private readonly List<RoomListItem> spawnedItems = new();
     private bool isJoining;
+    private string pendingRoomName;
 
     private void Awake()
     {
@@ -29,10 +38,19 @@ public class JoinRoomScreen : MonoBehaviour
         {
             refreshButton.onClick.AddListener(Refresh);
         }
+
+        inputPasswordSubmitButton.onClick.AddListener(OnSubmitPassword);
+        if (inputPasswordCancelButton != null)
+        {
+            inputPasswordCancelButton.onClick.AddListener(HidePasswordPanel);
+        }
     }
 
     private void OnEnable()
     {
+        // Always open this screen with the popup closed, even if it was left open last time.
+        HidePasswordPanel();
+
         if (NetworkManager.Instance == null) return;
 
         NetworkManager.Instance.SessionListUpdated += RenderRooms;
@@ -81,25 +99,87 @@ public class JoinRoomScreen : MonoBehaviour
         SetStatus(sessions.Count == 0 ? "No rooms found." : string.Empty);
     }
 
-    private async void OnJoinClicked(SessionInfo session)
+    // Called by a room row's Join button. Only decides *how* to join.
+    private void OnJoinClicked(SessionInfo session)
     {
         if (isJoining) return;
-        isJoining = true;
-        SetStatus($"Joining {session.Name}...");
 
-        string password = passwordInput != null ? passwordInput.text : string.Empty;
-        bool ok = await NetworkManager.Instance.JoinRoom(session.Name, password);
-
-        isJoining = false;
-        if (ok)
+        if (NetworkManager.HasPassword(session))
         {
-            presenter.NavigateTo(LobbyScreenType.WaitingRoomScreen);
+            ShowPasswordPanel(session.Name);
         }
         else
         {
-            SetStatus("Could not join room (full, closed, or wrong password).");
-            // A failed StartGame shuts the runner down; reconnect to the lobby so the list keeps updating.
-            await NetworkManager.Instance.JoinLobby();
+            TryJoin(session.Name, string.Empty);
+        }
+    }
+
+    private void OnSubmitPassword()
+    {
+        if (string.IsNullOrEmpty(pendingRoomName)) return;
+        TryJoin(pendingRoomName, inputPasswordField.text);
+    }
+
+    private void ShowPasswordPanel(string sessionName)
+    {
+        pendingRoomName = sessionName;
+        inputPasswordField.text = string.Empty;
+        SetPasswordError(string.Empty);
+        if (roomName != null)
+        {
+            roomName.text = sessionName;
+        }
+        inputPasswordScreen.SetActive(true);
+    }
+
+    private void HidePasswordPanel()
+    {
+        pendingRoomName = null;
+        if (inputPasswordScreen != null)
+        {
+            inputPasswordScreen.SetActive(false);
+        }
+    }
+    private async void TryJoin(string sessionName, string password)
+    {
+        if (isJoining) return; // stop double clicks starting two joins on one runner
+        isJoining = true;
+        inputPasswordSubmitButton.interactable = false;
+        SetStatus($"Joining {sessionName}...");
+
+        ShutdownReason result = await NetworkManager.Instance.JoinRoom(sessionName, password);
+
+        isJoining = false;
+        inputPasswordSubmitButton.interactable = true;
+
+        if (result == ShutdownReason.Ok)
+        {
+            HidePasswordPanel();
+            SetStatus(string.Empty);
+            presenter.NavigateTo(LobbyScreenType.WaitingRoomScreen);
+            return;
+        }
+
+        if (result == ShutdownReason.ConnectionRefused)
+        {
+            SetPasswordError("Wrong password.");
+            SetStatus(string.Empty);
+        }
+        else
+        {
+            HidePasswordPanel();
+            SetStatus(result == ShutdownReason.GameIsFull
+                ? "Room is full."
+                : "Room is no longer available.");
+        }
+        await NetworkManager.Instance.JoinLobby();
+    }
+
+    private void SetPasswordError(string message)
+    {
+        if (inputPasswordErrorText != null)
+        {
+            inputPasswordErrorText.text = message;
         }
     }
 
