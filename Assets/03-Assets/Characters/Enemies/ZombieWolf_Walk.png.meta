@@ -1,0 +1,879 @@
+fileFormatVersion: 2
+guid: c6d8db54d908f2545a0922789dad8b05
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_S_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac3ad611976dacc6d84e226ebc1291b
+      internalID: 1016018263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_S_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 280
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f7aa5917f4c551f3114d39fdaa0878
+      internalID: 646808108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_S_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 280
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822e58a6cee198caf02b95e0df32562c
+      internalID: -469570910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_S_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 280
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee8a2dc2e8411a85f5e530cb4f6be25
+      internalID: -39057925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e2a7cce693cdab58208c99b24f1f3a
+      internalID: 1623142198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SE_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 240
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543cd80a3c5667c83d46f58b3695ea4f
+      internalID: 1982619030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SE_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111dea784bce3c348deb07b5be60db3c
+      internalID: -503308734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SE_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce34b6338f98ba786ada1e4e60fbd414
+      internalID: 1698001772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_E_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894f129460f7deaa1b366d9375df6934
+      internalID: 483977724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_E_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 200
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df86bd398fcfb08667751b1de2bbfc44
+      internalID: 1293481649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_E_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 200
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a7fc0086209d9120ccca6daf8a62ad
+      internalID: 488689078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_E_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 200
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2608ff0f1756ab10721e2e1eaa547d74
+      internalID: -1823735518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f42b95b81ccf616eabe68a92aac668f
+      internalID: 1765970676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NE_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 160
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0436ddfadcc984eea3bc4f88460747
+      internalID: 641647269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NE_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e618c72f643456b72946d82187472cc
+      internalID: 448993173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NE_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 160
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7363bb434cee24dadcd9c51bffcf70
+      internalID: 1957414463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_N_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b319d9ca0eb4485420dce43b2648a1d2
+      internalID: -477567809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_N_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 120
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7cb446c31beac26a8bcbf020770dfc
+      internalID: -680725251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_N_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 120
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fff4f52f645d0e0d605f1e2257f8ca7
+      internalID: 406206455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_N_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa957c371204f361207e29be2eb2c35
+      internalID: -176287989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NW_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90dae584eab835f70c5d2cd545bcfd86
+      internalID: 1166842759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NW_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a690345f368e8ad458dae644acea1f8e
+      internalID: -1723617886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NW_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a928713094a7fb5414e6b9789e924b
+      internalID: 221512952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_NW_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349f2ba38f000fdabf08a6c6343df434
+      internalID: -40955765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_W_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf981c5390a38a5c043933e1e21477fa
+      internalID: -1565767480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_W_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27be4763a491ec3c32627c72c7c54a02
+      internalID: -129705285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_W_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf38a2cb166cdb3ca8db58bf1253bdc
+      internalID: 19456780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_W_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33162f7bb5abc6d11419e942d495a0aa
+      internalID: 544556084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SW_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2ae9e0ec1575ff52ca2599a2cc4a10
+      internalID: -1824301251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SW_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02dfbbaf1c9f4f7eb111e277084c8b7
+      internalID: -1552675695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SW_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53adeb5558f314810f98b92dbf6d4b4
+      internalID: 296748739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieWolf_Walk_SW_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8049bb8042e395361f3f8283babc94
+      internalID: 1984847441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cc390478e47e5e04d971ff0f4ce72f83
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ZombieWolf_Walk_E_0: 483977724
+      ZombieWolf_Walk_E_1: 1293481649
+      ZombieWolf_Walk_E_2: 488689078
+      ZombieWolf_Walk_E_3: -1823735518
+      ZombieWolf_Walk_NE_0: 1765970676
+      ZombieWolf_Walk_NE_1: 641647269
+      ZombieWolf_Walk_NE_2: 448993173
+      ZombieWolf_Walk_NE_3: 1957414463
+      ZombieWolf_Walk_NW_0: 1166842759
+      ZombieWolf_Walk_NW_1: -1723617886
+      ZombieWolf_Walk_NW_2: 221512952
+      ZombieWolf_Walk_NW_3: -40955765
+      ZombieWolf_Walk_N_0: -477567809
+      ZombieWolf_Walk_N_1: -680725251
+      ZombieWolf_Walk_N_2: 406206455
+      ZombieWolf_Walk_N_3: -176287989
+      ZombieWolf_Walk_SE_0: 1623142198
+      ZombieWolf_Walk_SE_1: 1982619030
+      ZombieWolf_Walk_SE_2: -503308734
+      ZombieWolf_Walk_SE_3: 1698001772
+      ZombieWolf_Walk_SW_0: -1824301251
+      ZombieWolf_Walk_SW_1: -1552675695
+      ZombieWolf_Walk_SW_2: 296748739
+      ZombieWolf_Walk_SW_3: 1984847441
+      ZombieWolf_Walk_S_0: 1016018263
+      ZombieWolf_Walk_S_1: 646808108
+      ZombieWolf_Walk_S_2: -469570910
+      ZombieWolf_Walk_S_3: -39057925
+      ZombieWolf_Walk_W_0: -1565767480
+      ZombieWolf_Walk_W_1: -129705285
+      ZombieWolf_Walk_W_2: 19456780
+      ZombieWolf_Walk_W_3: 544556084
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
